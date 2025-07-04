@@ -38,12 +38,16 @@ const HabitTracker = () => {
               </div>
             ))}
           </div>
-          <p>✅ Done: {habit.completedDates.length} days</p>
-          <p>🔥 Streak: {habit.streak} days</p>
+         <p className="habit-stats">
+  <span className="done-badge">✅ Done: {habit.completedDates.length}</span>
+  <span className="streak-badge">🔥 Streak: {habit.streak}</span>
+</p>
+
           <div className="action-buttons">
-            <button onClick={() => dispatch(toggleHabit(habit.id))}>Mark Done</button>
-            <button onClick={() => dispatch(deleteHabit(habit.id))}>Delete</button>
-          </div>
+  <button onClick={() => dispatch(toggleHabit(habit.id))}>Mark Done</button>
+  <button onClick={() => dispatch(deleteHabit(habit.id))}>Delete</button>
+</div>
+
         </div>
       ))}
     </div>

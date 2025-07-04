@@ -145,3 +145,31 @@ body {
 h3 {
   color: #333;
 }
+.habit-stats {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin: 10px 0 15px;
+}
+
+.done-badge, .streak-badge {
+  padding: 6px 14px;
+  font-size: 14px;
+  font-weight: 600;
+  border-radius: 20px;
+  display: inline-block;
+  box-shadow: 0 4px 8px rgba(135, 88, 255, 0.1);
+  transition: all 0.3s ease-in-out;
+}
+
+.done-badge {
+  background-color: #e0ffe8;
+  color: #16803c;
+  border: 1px solid #a7f5c6;
+}
+
+.streak-badge {
+  background-color: #fce5ff;
+  color: #b13ac1;
+  border: 1px solid #f0b3ff;
+}
