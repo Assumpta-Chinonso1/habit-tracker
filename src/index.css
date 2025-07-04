@@ -2,7 +2,7 @@
 /* Import Poppins Font */
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
 
-body {
+/*body {
   margin: 0;
   padding: 0;
   font-family: 'Poppins', sans-serif;
@@ -121,7 +121,7 @@ body {
   background-color: #8758ff;
 }
 
-/* Actions */
+
 .action-buttons {
   margin-top: 10px;
 }
@@ -172,4 +172,168 @@ h3 {
   background-color: #fce5ff;
   color: #b13ac1;
   border: 1px solid #f0b3ff;
+}*/
+
+
+
+/* Global App Styling */
+.app {
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(to right, #8758ff, #a176f5);
+  min-height: 100vh;
+  padding: 2rem;
+  color: white;
+  text-align: center;
+}
+
+h1 {
+  font-size: 2.5rem;
+  margin-bottom: 2rem;
+}
+
+/* Habit Container */
+.habit-container {
+  background-color: #ffffff15;
+  padding: 2rem;
+  border-radius: 20px;
+  max-width: 900px;
+  margin: 0 auto;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+}
+
+/* Input Section Styling */
+.input-section {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  margin-bottom: 2rem;
+}
+
+.input-section input {
+  padding: 0.8rem 1rem;
+  border: none;
+  border-radius: 10px;
+  font-size: 1rem;
+  width: 60%;
+  outline: none;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+}
+
+.input-section button {
+  background-color: #fff;
+  color: #8758ff;
+  border: none;
+  padding: 0.8rem 1.2rem;
+  font-weight: bold;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.input-section button:hover {
+  background-color: #cbb3f7;
+  color: white;
+}
+
+/* Calendar Grid Styling */
+.habits {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.habit-card {
+  background-color: #ffffff10;
+  border-radius: 15px;
+  padding: 1.5rem;
+  text-align: left;
+  transition: 0.3s ease;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.habit-card h3 {
+  margin-bottom: 1rem;
+  font-weight: 600;
+  font-size: 1.3rem;
+  color: #fff;
+}
+
+/* Grid of days */
+.calendar-grid {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.calendar-day {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.calendar-day span {
+  margin-bottom: 0.3rem;
+  font-size: 0.85rem;
+  color: #ddd;
+}
+
+.box {
+  width: 25px;
+  height: 25px;
+  border: 2px solid white;
+  border-radius: 5px;
+  background-color: transparent;
+  transition: 0.3s;
+}
+
+.box.done {
+  background-color: #00ff8c;
+  border-color: #00ff8c;
+}
+
+/* Stats */
+.habit-stats {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.9rem;
+  margin-bottom: 1rem;
+  color: #fff;
+}
+
+.done-badge,
+.streak-badge {
+  padding: 0.3rem 0.6rem;
+  border-radius: 6px;
+  font-weight: bold;
+}
+
+.done-badge {
+  background: #28d17c;
+}
+
+.streak-badge {
+  background: #ffbe0b;
+}
+
+/* Buttons */
+.action-buttons {
+  display: flex;
+  gap: 1rem;
+}
+
+.action-buttons button {
+  flex: 1;
+  background-color: transparent;
+  border: 1.5px solid #fff;
+  padding: 0.6rem;
+  border-radius: 8px;
+  color: #fff;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.action-buttons button:hover {
+  background-color: #ffffff30;
 }
