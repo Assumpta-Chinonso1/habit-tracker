@@ -113,3 +113,52 @@ body {
 .delete-btn:hover {
   color: crimson;
 }
+
+
+
+
+/* 💻 Medium Devices (Tablets) */
+@media (min-width: 601px) and (max-width: 1024px) {
+  .habit-wrapper {
+    padding: 2rem;
+  }
+
+  .habit-input {
+    flex-direction: row;
+    justify-content: center;
+  }
+
+  .habit-input input {
+    width: 300px;
+  }
+
+  .habit-title {
+    font-size: 1rem;
+  }
+}
+
+/* 🖥️ Large Devices (Desktop) */
+@media (min-width: 1025px) {
+  .habit-wrapper {
+    max-width: 900px;
+    margin: 2rem auto;
+  }
+
+  .calendar-header,
+  .calendar-row {
+    font-size: 1rem;
+  }
+
+  .day-box {
+    width: 30px;
+    height: 30px;
+  }
+
+  h1 {
+    font-size: 2.5rem;
+  }
+
+  .habit-title {
+    font-size: 1.1rem;
+  }
+}

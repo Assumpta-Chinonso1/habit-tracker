@@ -7,7 +7,7 @@ import { motion } from 'framer-motion';
 const App = () => {
   const [habitName, setHabitName] = useState('');
   const dispatch = useDispatch();
-  const habits = useSelector(state => state.habits);
+  const habits = useSelector((state) => state.habits.habits);
 
   const currentWeek = Array.from({ length: 7 }, (_, i) => {
     const today = new Date();
@@ -52,7 +52,7 @@ const App = () => {
           ))}
         </div>
 
-        {habits.map(habit => (
+        {habits.map((habit) => (
           <motion.div
             layout
             initial={{ opacity: 0, y: 10 }}
