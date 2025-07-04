@@ -1,7 +1,7 @@
-import { createSlice } from '@reduxjs/toolkit';
+import { createSlice, nanoid } from '@reduxjs/toolkit';
 
 const initialState = {
-  habitList: [],
+  habits: JSON.parse(localStorage.getItem('habits')) || [],
 };
 
 const habitSlice = createSlice({
@@ -9,46 +9,29 @@ const habitSlice = createSlice({
   initialState,
   reducers: {
     addHabit: (state, action) => {
-      state.habitList.push({
-        id: Date.now(),
+      state.habits.push({
+        id: nanoid(),
         name: action.payload,
-        completedDates: [],
-        streak: 0,
-        lastCompleted: null,
+        records: {}, 
       });
+      localStorage.setItem('habits', JSON.stringify(state.habits));
     },
-    toggleHabit: (state, action) => {
-      const habit = state.habitList.find(h => h.id === action.payload);
-      const today = new Date().toDateString();
-
-      if (!habit.completedDates.includes(today)) {
-        habit.completedDates.push(today);
-
-        const yesterday = new Date();
-        yesterday.setDate(yesterday.getDate() - 1);
-
-        const isYesterdayDone = habit.lastCompleted === yesterday.toDateString();
-
-        habit.streak = isYesterdayDone ? habit.streak + 1 : 1;
-        habit.lastCompleted = today;
+    toggleDay: (state, action) => {
+      const { habitId, date } = action.payload;
+      const habit = state.habits.find((h) => h.id === habitId);
+      if (habit) {
+        habit.records[date] = !habit.records[date];
+        localStorage.setItem('habits', JSON.stringify(state.habits));
       }
     },
     deleteHabit: (state, action) => {
-      state.habitList = state.habitList.filter(h => h.id !== action.payload);
+      state.habits = state.habits.filter(h => h.id !== action.payload);
+      localStorage.setItem('habits', JSON.stringify(state.habits));
     },
   },
 });
 
-export const { addHabit, toggleHabit, deleteHabit } = habitSlice.actions;
+export const { addHabit, toggleDay, deleteHabit } = habitSlice.actions;
 export default habitSlice.reducer;
 
-// export utility
-export const getDateByWeekday = (dayIndex) => {
-  const today = new Date();
-  const currentDay = today.getDay();
-  const diff = dayIndex - currentDay;
-  const targetDate = new Date(today);
-  targetDate.setDate(today.getDate() + diff);
-  return targetDate.toDateString();
-};
 

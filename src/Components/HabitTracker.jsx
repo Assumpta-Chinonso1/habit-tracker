@@ -1,125 +1,93 @@
-/*import React, { useState } from 'react';
-import { useDispatch, useSelector } from 'react-redux';
-import { addHabit, toggleHabit, deleteHabit, getDateByWeekday } from  '../HabitTracker/HabitSlice';
-
-const HabitTracker = () => {
-  const [habitName, setHabitName] = useState('');
-  const dispatch = useDispatch();
-  const habits = useSelector((state) => state.habits.habitList);
-
-  const handleAddHabit = () => {
-    if (habitName.trim()) {
-      dispatch(addHabit(habitName));
-      setHabitName('');
-    }
-  };
-
-  return (
-  <div className="habit-container">
-    <div className="input-section">
-      <input
-        type="text"
-        placeholder="Enter new habit"
-        value={habitName}
-        onChange={(e) => setHabitName(e.target.value)}
-      />
-      <button onClick={handleAddHabit}>Add Habit</button>
-    </div>
-
-    <div className="habits">
-      {habits.map((habit) => (
-        <div className="habit-card" key={habit.id}>
-          <h3>{habit.name}</h3>
-          <div className="calendar-grid">
-            {['Sun','Mon','Tue','Wed','Thu','Fri','Sat'].map((day, index) => (
-              <div className="calendar-day" key={index}>
-                <span>{day}</span>
-                <div className={`box ${habit.completedDates.includes(getDateByWeekday(index)) ? 'done' : ''}`}></div>
-              </div>
-            ))}
-          </div>
-         <p className="habit-stats">
-  <span className="done-badge">✅ Done: {habit.completedDates.length}</span>
-  <span className="streak-badge">🔥 Streak: {habit.streak}</span>
-</p>
-
-          <div className="action-buttons">
-  <button onClick={() => dispatch(toggleHabit(habit.id))}>Mark Done</button>
-  <button onClick={() => dispatch(deleteHabit(habit.id))}>Delete</button>
-</div>
-
-        </div>
-      ))}
-    </div>
-  </div>
-);
-
-};
-
-export default HabitTracker;*/
-
 import React, { useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { addHabit, toggleHabit, deleteHabit, getDateByWeekday } from '../HabitTracker/HabitSlice';
+import { addHabit, toggleDay, deleteHabit } from '../HabitTracker/HabitSlice';
+import { format } from 'date-fns';
+import { motion } from 'framer-motion';
 
-const HabitTracker = () => {
+const App = () => {
   const [habitName, setHabitName] = useState('');
   const dispatch = useDispatch();
-  const habits = useSelector((state) => state.habits.habitList);
+  const habits = useSelector(state => state.habits);
 
-  const handleAddHabit = () => {
+  const currentWeek = Array.from({ length: 7 }, (_, i) => {
+    const today = new Date();
+    today.setDate(today.getDate() - today.getDay() + i);
+    return today.toISOString().split('T')[0];
+  });
+
+  const handleAdd = () => {
     if (habitName.trim()) {
-      dispatch(addHabit(habitName));
+      dispatch(addHabit(habitName.trim()));
       setHabitName('');
     }
   };
 
   return (
-    <div className="habit-container">
-      <h2>Track Your Habits</h2>
+    <div className="habit-wrapper">
+      <h1>My Habit Tracker</h1>
 
-      <div className="input-section">
+      <div className="habit-input">
         <input
           type="text"
-          placeholder="Enter a new habit"
           value={habitName}
+          placeholder="Enter habit e.g. Drink Water"
           onChange={(e) => setHabitName(e.target.value)}
         />
-        <button onClick={handleAddHabit}>Add</button>
+        <motion.button
+          className="add-btn"
+          whileTap={{ scale: 0.9 }}
+          onClick={handleAdd}
+        >
+          Add Habit
+        </motion.button>
       </div>
 
       <div className="calendar">
-        <div className="calendar-grid">
-          {['Sun','Mon','Tue','Wed','Thu','Fri','Sat'].map((day, index) => (
-            <div className="calendar-day" key={index}>
-              <strong>{day}</strong>
-              {habits.map((habit) => (
-                <div
-                  key={habit.id}
-                  className={`box ${habit.completedDates.includes(getDateByWeekday(index)) ? 'done' : ''}`}
-                  onClick={() => dispatch(toggleHabit(habit.id))}
-                >
-                  {habit.name}
-                </div>
-              ))}
-            </div>
+        <div className="calendar-header">
+          <span className="header-title">Habit</span>
+          {currentWeek.map(date => (
+            <span key={date} className="header-day">
+              {format(new Date(date), 'EEE')}
+            </span>
           ))}
         </div>
-      </div>
 
-      <div className="habit-summary">
-        {habits.map((habit) => (
-          <div className="habit-card" key={habit.id}>
-            <div className="habit-info">
-              <h4>{habit.name}</h4>
-              <p>✅ Done: {habit.completedDates.length} | 🔥 Streak: {habit.streak}</p>
-            </div>
-            <button onClick={() => dispatch(deleteHabit(habit.id))} className="delete-btn">Delete</button>
-          </div>
+        {habits.map(habit => (
+          <motion.div
+            layout
+            initial={{ opacity: 0, y: 10 }}
+            animate={{ opacity: 1, y: 0 }}
+            className="calendar-row"
+            key={habit.id}
+          >
+            <span className="habit-title">{habit.name}</span>
+            {currentWeek.map(date => (
+              <div
+                key={date}
+                className={`day-box ${habit.records[date] ? 'checked' : ''}`}
+                onClick={() => dispatch(toggleDay({ habitId: habit.id, date }))}
+              >
+                {habit.records[date] && <span className="checkmark">✅</span>}
+              </div>
+            ))}
+            <button
+              className="delete-btn"
+              onClick={() => dispatch(deleteHabit(habit.id))}
+              title="Delete Habit"
+            >
+              🗑️
+            </button>
+          </motion.div>
         ))}
       </div>
     </div>
   );
 };
 
-export default HabitTracker;
+export default App;
+
+
+
+
+
+
