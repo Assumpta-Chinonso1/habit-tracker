@@ -1,0 +1,55 @@
+import React, { useState } from 'react';
+import { useDispatch, useSelector } from 'react-redux';
+import { addHabit, toggleHabit, deleteHabit, getDateByWeekday } from  '../HabitTracker/HabitSlice';
+
+const HabitTracker = () => {
+  const [habitName, setHabitName] = useState('');
+  const dispatch = useDispatch();
+  const habits = useSelector((state) => state.habits.habitList);
+
+  const handleAddHabit = () => {
+    if (habitName.trim()) {
+      dispatch(addHabit(habitName));
+      setHabitName('');
+    }
+  };
+
+  return (
+  <div className="habit-container">
+    <div className="input-section">
+      <input
+        type="text"
+        placeholder="Enter new habit"
+        value={habitName}
+        onChange={(e) => setHabitName(e.target.value)}
+      />
+      <button onClick={handleAddHabit}>Add Habit</button>
+    </div>
+
+    <div className="habits">
+      {habits.map((habit) => (
+        <div className="habit-card" key={habit.id}>
+          <h3>{habit.name}</h3>
+          <div className="calendar-grid">
+            {['Sun','Mon','Tue','Wed','Thu','Fri','Sat'].map((day, index) => (
+              <div className="calendar-day" key={index}>
+                <span>{day}</span>
+                <div className={`box ${habit.completedDates.includes(getDateByWeekday(index)) ? 'done' : ''}`}></div>
+              </div>
+            ))}
+          </div>
+          <p>✅ Done: {habit.completedDates.length} days</p>
+          <p>🔥 Streak: {habit.streak} days</p>
+          <div className="action-buttons">
+            <button onClick={() => dispatch(toggleHabit(habit.id))}>Mark Done</button>
+            <button onClick={() => dispatch(deleteHabit(habit.id))}>Delete</button>
+          </div>
+        </div>
+      ))}
+    </div>
+  </div>
+);
+
+};
+
+export default HabitTracker;
