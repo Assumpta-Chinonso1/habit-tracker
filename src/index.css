@@ -1,11 +1,14 @@
 @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@400;600&display=swap');
 
-body {
+
+ body {
   font-family: 'Outfit', sans-serif;
   background: #f7f9fc;
   margin: 0;
   padding: 20px;
+  box-sizing: border-box;
 }
+
 
 .habit-wrapper {
   max-width: 900px;
@@ -115,5 +118,69 @@ body {
 }
 
 
+@media screen and (max-width: 768px) {
+  body {
+    padding: 10px;
+  }
 
+   .habit-wrapper {
+    padding: 20px 15px;
+    margin: 10px auto;
+    width: 100%;
+    box-sizing: border-box;
+    border-radius: 12px;
+  }
+  .habit-wrapper h1 {
+    font-size: 22px;
+    margin-bottom: 20px;
+  }
+
+  .habit-input {
+    flex-direction: column;
+    gap: 10px;
+    align-items: stretch;
+  }
+
+  .habit-input input {
+    width: 90%;
+    font-size: 15px;
+  }
+
+  .add-btn {
+    width: 100%;
+    padding: 10px;
+    font-size: 15px;
+  }
+
+  .calendar-header,
+  .calendar-row {
+    grid-template-columns: 1fr repeat(7, minmax(30px, 1fr)) 40px;
+    gap: 6px;
+    padding: 8px 0;
+    font-size: 14px;
+  }
+
+  .header-title,
+  .habit-title {
+    font-size: 15px;
+  }
+
+  .header-day {
+    font-size: 13px;
+  }
+
+  .day-box {
+    width: 28px;
+    height: 28px;
+    font-size: 13px;
+  }
+
+  .checkmark {
+    font-size: 16px;
+  }
+
+  .delete-btn {
+    font-size: 18px;
+  }
+}
 
