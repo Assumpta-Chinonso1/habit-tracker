@@ -117,48 +117,100 @@ body {
 
 
 
-/* 💻 Medium Devices (Tablets) */
-@media (min-width: 601px) and (max-width: 1024px) {
+
+@media (max-width: 768px) {
   .habit-wrapper {
-    padding: 2rem;
+    padding: 20px;
+    border-radius: 16px;
+  }
+
+  .habit-wrapper h1 {
+    font-size: 24px;
+    margin-bottom: 20px;
   }
 
   .habit-input {
-    flex-direction: row;
-    justify-content: center;
+    flex-direction: column;
+    gap: 10px;
   }
 
   .habit-input input {
-    width: 300px;
+    width: 100%;
+    font-size: 14px;
   }
 
-  .habit-title {
-    font-size: 1rem;
-  }
-}
-
-/* 🖥️ Large Devices (Desktop) */
-@media (min-width: 1025px) {
-  .habit-wrapper {
-    max-width: 900px;
-    margin: 2rem auto;
+  .add-btn {
+    width: 100%;
+    font-size: 14px;
+    padding: 10px;
   }
 
   .calendar-header,
   .calendar-row {
-    font-size: 1rem;
+    grid-template-columns: 1fr repeat(7, 35px) 40px;
+    gap: 6px;
+    padding: 8px 0;
   }
 
   .day-box {
     width: 30px;
     height: 30px;
+    font-size: 14px;
   }
 
-  h1 {
-    font-size: 2.5rem;
+  .checkmark {
+    font-size: 16px;
+  }
+
+  .header-day {
+    font-size: 12px;
   }
 
   .habit-title {
-    font-size: 1.1rem;
+    font-size: 14px;
+  }
+
+  .delete-btn {
+    font-size: 18px;
+  }
+}
+
+@media (max-width: 480px) {
+  .habit-wrapper {
+    padding: 15px;
+  }
+
+  .habit-wrapper h1 {
+    font-size: 20px;
+  }
+
+  .habit-input input {
+    font-size: 13px;
+    padding: 8px 12px;
+  }
+
+  .add-btn {
+    font-size: 13px;
+    padding: 8px 12px;
+  }
+
+  .calendar-header,
+  .calendar-row {
+    grid-template-columns: 1fr repeat(7, 30px) 35px;
+    gap: 4px;
+  }
+
+  .day-box {
+    width: 26px;
+    height: 26px;
+    font-size: 13px;
+  }
+
+  .checkmark {
+    font-size: 14px;
+  }
+
+  .delete-btn {
+    font-size: 16px;
   }
 }
