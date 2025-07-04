@@ -4,8 +4,6 @@ const initialState = {
   habitList: [],
 };
 
-
-
 const habitSlice = createSlice({
   name: 'habits',
   initialState,
@@ -38,16 +36,19 @@ const habitSlice = createSlice({
     deleteHabit: (state, action) => {
       state.habitList = state.habitList.filter(h => h.id !== action.payload);
     },
-    getDateByWeekday: (dayIndex) => {
+  },
+});
+
+export const { addHabit, toggleHabit, deleteHabit } = habitSlice.actions;
+export default habitSlice.reducer;
+
+// export utility
+export const getDateByWeekday = (dayIndex) => {
   const today = new Date();
   const currentDay = today.getDay();
   const diff = dayIndex - currentDay;
   const targetDate = new Date(today);
   targetDate.setDate(today.getDate() + diff);
   return targetDate.toDateString();
-}
-  },
-});
+};
 
-export const { addHabit, toggleHabit, deleteHabit, getDateByWeekday } = habitSlice.actions;
-export default habitSlice.reducer;
