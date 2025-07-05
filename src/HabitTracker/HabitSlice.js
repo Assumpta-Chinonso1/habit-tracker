@@ -31,8 +31,37 @@ const habitSlice = createSlice({
     },
   },
 });
-
-
 export const { addHabit, toggleDay, deleteHabit } = habitSlice.actions;
 export default habitSlice.reducer;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
