@@ -18,6 +18,8 @@ const habitSlice = createSlice({
       })
       localStorage.setItem("habits", JSON.stringify(state.habits))
     },
-    toggleDay : (state, action)
+    toggleDay : (state, action) => {
+      const {habitId, date}
+    }
   }
 })
