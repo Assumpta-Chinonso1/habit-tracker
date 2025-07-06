@@ -32,7 +32,7 @@ const habitSlice = createSlice ({
     }
 })
 
-export const { addHabit, }
+export const { addHabit, toggledHabit, }
 
 
 
