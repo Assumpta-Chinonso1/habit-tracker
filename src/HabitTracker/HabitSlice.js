@@ -8,10 +8,15 @@ const initialState = {
 const habitSlice = createSlice ({
     name: "habits",
     initialState,
-    id: nanoid,
-    records:{},
     reducers: {
-        
+        addHabits: (state, action) => {
+           state.habits.push ({
+                id: nanoid,
+                name: action.payload,
+                records:{}
+            })
+            localStorage.setItem("habits", JSON.stringify(state.habits))
+        }
     }
 })
 
