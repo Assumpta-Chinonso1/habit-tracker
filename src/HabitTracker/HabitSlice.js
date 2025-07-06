@@ -9,13 +9,21 @@ const habitSlice = createSlice ({
     name: "habits",
     initialState,
     reducers: {
-        addHabits: (state, action) => {
+        addHabit: (state, action) => {
            state.habits.push ({
                 id: nanoid,
                 name: action.payload,
                 records:{}
             })
             localStorage.setItem("habits", JSON.stringify(state.habits))
+        },
+        toggledHabit: (state, action) => {
+            const {habitId, date} = action.payload;
+            const habit = state.habits.find((h)=>h.id === habitId)
+            if(habit){
+                habit.records[date] = ! habit.records[date]
+                localStorage.setItem("habits", JSON.stringify(state.habits))
+            }
         }
     }
 })
