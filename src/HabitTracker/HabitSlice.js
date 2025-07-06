@@ -16,7 +16,7 @@ const habitSlice = createSlice ({
             })
             localStorage.setItem("habits", JSON.stringify(state.habits))
         },
-        toggledDay: (state, action) => {
+        toggleDay: (state, action) => {
             const {habitId, date} = action.payload;
             const habit = state.habits.find((h)=>h.id === habitId)
             if(habit){
@@ -31,7 +31,7 @@ const habitSlice = createSlice ({
     }
 })
 
-export const { addHabit, toggledDay, deleteHabit } = habitSlice.actions
+export const { addHabit, toggleDay, deleteHabit } = habitSlice.actions
 export default habitSlice.reducer
 
 
