@@ -32,7 +32,7 @@ const habitSlice = createSlice ({
     }
 })
 
-export const { addHabit, toggledHabit, deleteHabit } =
+export const { addHabit, toggledHabit, deleteHabit } = habitSlice.actions
 
 
 
