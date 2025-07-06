@@ -31,7 +31,7 @@ const habitSlice = createSlice ({
     }
 })
 
-export const { addHabit, toggledHabit, deleteHabit } = habitSlice.actions
+export const { addHabit, toggledDay, deleteHabit } = habitSlice.actions
 export default habitSlice.reducer
 
 
