@@ -1,188 +1,4 @@
- /*@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@400;600&display=swap');
 
-
- body {
-  font-family: 'Outfit', sans-serif;
-  background: #f7f9fc;
-  margin: 0;
-  padding: 20px;
-  box-sizing: border-box;
-}
-
-
-.habit-wrapper {
-  max-width: 900px;
-  margin: auto;
-  background: #ffffff;
-  border-radius: 20px;
-  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.06);
-  padding: 30px;
-}
-
-.habit-wrapper h1 {
-  text-align: center;
-  color: #2b2d42;
-  margin-bottom: 30px;
-}
-
-.habit-input {
-  display: flex;
-  gap: 15px;
-  justify-content: center;
-  margin-bottom: 30px;
-}
-
-.habit-input input {
-  padding: 10px 14px;
-  border: 1px solid #ddd;
-  border-radius: 12px;
-  flex: 1;
-  font-size: 16px;
-}
-
-.add-btn {
-  background: #00b894;
-  color: white;
-  padding: 10px 20px;
-  border-radius: 12px;
-  border: none;
-  cursor: pointer;
-  transition: 0.3s ease;
-}
-
-.add-btn:hover {
-  background: #019875;
-}
-
-.calendar {
-  overflow-x: auto;
-}
-
-.calendar-header,
-.calendar-row {
-  display: grid;
-  grid-template-columns: 1fr repeat(7, 1fr) 50px;
-  gap: 10px;
-  align-items: center;
-  padding: 10px 0;
-  border-bottom: 1px solid #eee;
-}
-
-.header-title,
-.habit-title {
-  font-weight: 600;
-  color: #2b2d42;
-}
-
-.header-day {
-  font-weight: 500;
-  color: #576574;
-  text-align: center;
-}
-
-.day-box {
-  width: 35px;
-  height: 35px;
-  background: #e0e0e0;
-  border-radius: 8px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  cursor: pointer;
-  transition: 0.2s ease;
-}
-
-.day-box:hover {
-  background: #d1d1d1;
-}
-
-.day-box.checked {
-  background: #55efc4;
-  color: #2d3436;
-}
-
-.checkmark {
-  font-size: 18px;
-}
-
-.delete-btn {
-  background: transparent;
-  border: none;
-  font-size: 20px;
-  cursor: pointer;
-  transition: 0.2s ease;
-}
-
-.delete-btn:hover {
-  color: crimson;
-}
-
-@media screen and (max-width: 768px) {
-  body {
-    padding: 10px;
-  }
-
-   .habit-wrapper {
-    padding: 20px 15px;
-    margin: 10px auto;
-    width: 100%;
-    box-sizing: border-box;
-    border-radius: 12px;
-  }
-  .habit-wrapper h1 {
-    font-size: 22px;
-    margin-bottom: 20px;
-  }
-
-  .habit-input {
-    flex-direction: column;
-    gap: 10px;
-    align-items: stretch;
-  }
-
-  .habit-input input {
-    width: 90%;
-    font-size: 15px;
-  }
-
-  .add-btn {
-    width: 100%;
-    padding: 10px;
-    font-size: 15px;
-  }
-
-  .calendar-header,
-  .calendar-row {
-    grid-template-columns: 1fr repeat(7, minmax(30px, 1fr)) 40px;
-    gap: 6px;
-    padding: 8px 0;
-    font-size: 14px;
-  }
-
-  .header-title,
-  .habit-title {
-    font-size: 15px;
-  }
-
-  .header-day {
-    font-size: 13px;
-  }
-
-  .day-box {
-    width: 28px;
-    height: 28px;
-    font-size: 13px;
-  }
-
-  .checkmark {
-    font-size: 16px;
-  }
-
-  .delete-btn {
-    font-size: 18px;
-  }
-}
-*/
 
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
 
@@ -271,6 +87,17 @@ h1 {
   margin: auto;
   cursor: pointer;
 }
+.calendar-row {
+  position: relative;
+  z-index: 1;
+}
+
+.day-box {
+  cursor: pointer;
+  z-index: 2;
+  position: relative;
+}
+
 
 .day-box.checked {
   background: black;
@@ -283,6 +110,10 @@ h1 {
   text-align: center;
   line-height: 25px;
 }
+.checkmark {
+  pointer-events: none;
+}
+
 
 .delete-btn {
   background: none;

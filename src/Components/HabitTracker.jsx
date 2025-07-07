@@ -1,4 +1,4 @@
-/*import React, { useState } from 'react';
+import React, { useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { addHabit,   toggleDay,  deleteHabit} from '../HabitTracker/HabitSlice';
 import { format } from 'date-fns';
@@ -27,9 +27,9 @@ const App = () => {
     <div className="habit-wrapper">
    
       <h1>My Habit Tracker</h1>
-              <div className="date-section">
-  <div>WEEK OF __________</div>
-  <div>DATE __________</div>
+    <div className="date-section">
+  <div>WEEK OF {format(new Date(currentWeek[0]), 'MMM d')}</div>
+  <div>DATE {format(new Date(), 'MMM d, yyyy')}</div>
 </div>
 
       <div className="habit-input">
@@ -66,6 +66,7 @@ const App = () => {
             className="calendar-row"
             key={habit.id}
           >
+
             <span className="habit-title">{habit.name}</span>
             {currentWeek.map(date => (
               <div
@@ -90,10 +91,7 @@ const App = () => {
   );
 };
 
-export default App;*/
-
-
-
+export default App;
 
 
 
