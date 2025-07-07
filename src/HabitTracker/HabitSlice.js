@@ -19,7 +19,10 @@ const habitSlice = createSlice({
         toggleDay: (state, action) => {
             const {habitId, date} = action.payload;
             const habit = state.habits.find((h)=> h.id === habitId)
-            if
+            if(habit){
+                habit.records[date] = !habit.records[date]
+                
+            }
         }
     }
 })
