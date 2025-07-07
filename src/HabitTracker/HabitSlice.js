@@ -1,0 +1,25 @@
+import { createSlice, nanoid } from "@reduxjs/toolkit";
+
+const initialState = {
+    habits: JSON.parse(localStorage.getItem("habits"))
+}
+
+const habitSlice = createSlice({
+    name: "habits",
+    initialState,
+    reducers: {
+        addHabit: (state, action) => {
+            state.habits.push({
+                name: action.payload,
+                id: nanoid,
+                records:{}
+            })
+            localStorage.setItem("habits", JSON.stringify(state. habits))
+        },
+        toggleDay: (state, action) => {
+            const {habitId, date} = action.payload;
+            const habit = state.habits.find((h)=> h.id === habitId)
+            if
+        }
+    }
+})
