@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { addHabit, toggleDay, deleteHabit } from '../HabitTracker/HabitSlice';
+import { addHabit,  deleteHabit, toggleDay } from '../HabitTracker/HabitSlice';
 import { format } from 'date-fns';
 import { motion } from 'framer-motion';
 
