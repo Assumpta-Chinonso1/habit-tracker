@@ -31,4 +31,4 @@ const habitSlice = createSlice({
     }
 })
 
-export const {}
+export const { addHabit, }
