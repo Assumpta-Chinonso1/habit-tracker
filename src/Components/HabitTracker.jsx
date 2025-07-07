@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+/*import React, { useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { addHabit,   toggleDay,  deleteHabit} from '../HabitTracker/HabitSlice';
 import { format } from 'date-fns';
@@ -25,7 +25,12 @@ const App = () => {
 
   return (
     <div className="habit-wrapper">
+   
       <h1>My Habit Tracker</h1>
+              <div className="date-section">
+  <div>WEEK OF __________</div>
+  <div>DATE __________</div>
+</div>
 
       <div className="habit-input">
         <input
@@ -85,7 +90,7 @@ const App = () => {
   );
 };
 
-export default App;
+export default App;*/
 
 
 

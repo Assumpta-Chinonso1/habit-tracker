@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@400;600&display=swap');
+ /*@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@400;600&display=swap');
 
 
  body {
@@ -117,7 +117,6 @@
   color: crimson;
 }
 
-
 @media screen and (max-width: 768px) {
   body {
     padding: 10px;
@@ -183,4 +182,111 @@
     font-size: 18px;
   }
 }
+*/
 
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+
+body {
+  margin: 0;
+  padding: 40px;
+  font-family: Arial, sans-serif;
+  background: white;
+  color: black;
+}
+
+.habit-wrapper {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+h1 {
+  text-align: center;
+  font-family: 'Brush Script MT', cursive;
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+}
+
+.date-section {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.habit-input {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.habit-input input {
+  flex: 1;
+  padding: 8px;
+  border: 1px solid #000;
+  font-size: 1rem;
+}
+
+.add-btn {
+  padding: 8px 16px;
+  border: 1px solid #000;
+  background: white;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.calendar {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+.calendar-header {
+  display: grid;
+  grid-template-columns: 2fr repeat(7, 1fr);
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 5px;
+  padding-bottom: 5px;
+  border-bottom: 2px solid black;
+}
+
+.calendar-row {
+  display: grid;
+  grid-template-columns: 2fr repeat(7, 1fr) 40px;
+  align-items: center;
+  border-bottom: 1px solid #ccc;
+  padding: 6px 0;
+}
+
+.habit-title {
+  border-bottom: 1px solid #000;
+  padding-left: 5px;
+}
+
+.day-box {
+  height: 25px;
+  width: 25px;
+  border: 1px solid #000;
+  border-radius: 50%;
+  margin: auto;
+  cursor: pointer;
+}
+
+.day-box.checked {
+  background: black;
+}
+
+.checkmark {
+  color: white;
+  font-size: 14px;
+  display: block;
+  text-align: center;
+  line-height: 25px;
+}
+
+.delete-btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 18px;
+}
