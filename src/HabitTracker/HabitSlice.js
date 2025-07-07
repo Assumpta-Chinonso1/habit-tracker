@@ -31,4 +31,5 @@ const habitSlice = createSlice({
     }
 })
 
-export const { addHabit, toggleDay, deleteHabit  } = 
+export const { addHabit, toggleDay, deleteHabit  } =  habitSlice.actions
+export de
