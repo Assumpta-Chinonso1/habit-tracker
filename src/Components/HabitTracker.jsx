@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { addHabit,  deleteHabit, toggleDay } from '../HabitTracker/HabitSlice';
+import { addHabit,   toggleDay,  deleteHabit} from '../HabitTracker/HabitSlice';
 import { format } from 'date-fns';
 import { motion } from 'framer-motion';
 
@@ -8,6 +8,7 @@ const App = () => {
   const [habitName, setHabitName] = useState('');
   const dispatch = useDispatch();
   const habits = useSelector((state) => state.habits.habits);
+
 
   const currentWeek = Array.from({ length: 7 }, (_, i) => {
     const today = new Date();

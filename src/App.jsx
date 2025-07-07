@@ -4,9 +4,7 @@ import HabitTracker from './Components/HabitTracker'
 const App = () => {
   return (
     <div className='app'>
-
-
-       <HabitTracker/>
+  <HabitTracker/>
     </div>
   )
 }
