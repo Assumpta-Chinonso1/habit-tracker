@@ -25,6 +25,10 @@ const habitSlice = createSlice({
                 localStorage.setItem('habits', JSON.stringify(state.habits))
             }
          },
-         deleteHabit:  
+         deleteHabit:  (state, action) => {
+            state.habits = state.habits(h=>h.id !== action.payload)
+         }
     }
 })
+
+export const {}
