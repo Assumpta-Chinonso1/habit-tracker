@@ -148,7 +148,7 @@ h1 {
   .add-btn {
     width: 100%;
     font-size: 1rem;
-  }
+  }*/
 
   .calendar-header {
     grid-template-columns: 1.5fr repeat(7, 1fr);
@@ -168,7 +168,7 @@ h1 {
   .checkmark {
     font-size: 12px;
     line-height: 22px;
-  }*/
+  }
 
   .delete-btn {
     font-size: 16px;
