@@ -31,4 +31,4 @@ const habitSlice = createSlice({
     }
 })
 
-export const { addHabit, toggleDay, }
+export const { addHabit, toggleDay, deleteHabit  } = 
