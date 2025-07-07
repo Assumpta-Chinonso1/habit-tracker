@@ -1,5 +1,4 @@
 
-
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
 
 body {
@@ -121,3 +120,62 @@ h1 {
   cursor: pointer;
   font-size: 18px;
 }
+
+
+
+@media (max-width: 768px) {
+  body {
+    padding: 20px;
+  }
+
+  .habit-wrapper {
+    max-width: 100%;
+    padding: 0 10px;
+  }
+
+  /*.date-section {
+    flex-direction: column;
+    gap: 5px;
+    font-size: 0.9rem;
+    align-items: flex-start;
+  }
+
+  .habit-input {
+    flex-direction: column;
+  }
+
+  .habit-input input,
+  .add-btn {
+    width: 100%;
+    font-size: 1rem;
+  }
+
+  .calendar-header {
+    grid-template-columns: 1.5fr repeat(7, 1fr);
+    font-size: 0.85rem;
+  }
+
+  .calendar-row {
+    grid-template-columns: 1.5fr repeat(7, 1fr) 30px;
+    font-size: 0.85rem;
+  }
+
+  .day-box {
+    height: 22px;
+    width: 22px;
+  }
+
+  .checkmark {
+    font-size: 12px;
+    line-height: 22px;
+  }*/
+
+  .delete-btn {
+    font-size: 16px;
+  }
+
+  h1 {
+    font-size: 2rem;
+  }
+}
+
