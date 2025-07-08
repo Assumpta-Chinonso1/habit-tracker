@@ -72,8 +72,7 @@ const currentWeek = Array.from({length: 7}, (_, i) => {
                   key={date}
                    className={`day-box ${habit.records[date] ? "checked": ''}` }
                    onClick={()=> dispatch(toggleDay({habitId: habit.id, date}))}>
-                    {habit.records[date] && <span className="checkmark">✅</span>}
-                       
+                    {habit.records[date] && <span className="checkmark">✅</span>}  
                         </div>
 
                     ))}
