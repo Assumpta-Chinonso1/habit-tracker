@@ -133,23 +133,6 @@ h1 {
     padding: 0 10px;
   }
 
-  /*.date-section {
-    flex-direction: column;
-    gap: 5px;
-    font-size: 0.9rem;
-    align-items: flex-start;
-  }
-
-  .habit-input {
-    flex-direction: column;
-  }
-
-  .habit-input input,
-  .add-btn {
-    width: 100%;
-    font-size: 1rem;
-  }*/
-
   .calendar-header {
     grid-template-columns: 1.5fr repeat(7, 1fr);
     font-size: 0.85rem;
