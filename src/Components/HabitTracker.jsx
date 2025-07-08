@@ -21,7 +21,7 @@ const currentWeek = Array.from({length: 7}, (_, i) => {
     const handleAdd = (e) => {
         e.preventDefault()
         if(habitName.trim()){
-            dispatch(addHabit(habitName.trim))
+            dispatch(addHabit(habitName.trim()))
             setHabitName('')
         }
     }
