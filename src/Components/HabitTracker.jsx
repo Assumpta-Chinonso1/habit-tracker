@@ -80,7 +80,7 @@ const currentWeek = Array.from({length: 7}, (_, i) => {
                     <button className="delete-btn"
                     onClick={() => dispatch(deleteHabit(habit.id))}
                     title="Delete Habit">
-                              🗑️
+                    🗑️
                     </button>
               
                 </motion.div>
