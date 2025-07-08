@@ -49,7 +49,7 @@ const currentWeek = Array.from({length: 7}, (_, i) => {
             </motion.button>
              </div>
         
-          <div className="calendar">
+            <div className="calendar">
             <div className="calendar-header">
                 <span className="header-title">Habit</span>
                 {currentWeek.map(date => (
