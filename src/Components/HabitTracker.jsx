@@ -86,8 +86,7 @@ const currentWeek = Array.from({length: 7}, (_, i) => {
                 </motion.div>
               ))}
         </div>
-    </div>
-    
+    </div>   
 )
 }
 export default HabitTracker
