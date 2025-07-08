@@ -47,10 +47,9 @@ const currentWeek = Array.from({length: 7}, (_, i) => {
               onClick={handleAdd} >
                 Add Habit
             </motion.button>
-        </div>
-
-
-        <div className="calendar">
+             </div>
+        
+          <div className="calendar">
             <div className="calendar-header">
                 <span className="header-title">Habit</span>
                 {currentWeek.map(date => (
