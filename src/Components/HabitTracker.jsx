@@ -1,11 +1,12 @@
 import { useState } from "react"
 import { useDispatch, useSelector } from "react-redux"
+import { addHabit } from "../HabitTracker/HabitSlice"
 
 
 
 
 const HabitTracker = () => {
-const [habitNam, setHabitName] = useState('')
+const [habitName, setHabitName] = useState('')
 const habits = useSelector((state) => state.habits.habits)
 const dispatch = useDispatch()
 
@@ -14,16 +15,23 @@ const currentWeek = Array.from({length: 7}, (_, i) => {
     today.setDate(today.getDate() - today.getDate() + i)
     return today.toISOString().split('T')[0]
 
-
-    const 
 })
+    const handleAdd = (e) => {
+        e.preventDefault()
+        if(habitName.trim()){
+            dispatch(addHabit(habitName.trim))
+            setHabitName('')
+        }
+    }
+
 
 
 
 
 return (
 
-    <div>
+    <div className="habit-wrapper">
+        <h1>My Habit Tracker</h1>
 
     </div>
     
