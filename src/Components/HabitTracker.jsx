@@ -26,10 +26,6 @@ const currentWeek = Array.from({length: 7}, (_, i) => {
         }
     }
 
-
-
-
-
 return (
 
     <div className="habit-wrapper">
