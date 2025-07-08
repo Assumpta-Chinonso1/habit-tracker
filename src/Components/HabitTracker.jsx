@@ -1,8 +1,7 @@
 import { useState } from "react"
 import { useDispatch, useSelector } from "react-redux"
-import { addHabit } from "../HabitTracker/HabitSlice"
+import { addHabit, toggleDay } from "../HabitTracker/HabitSlice"
 import { format } from "date-fns"
-import { scale } from "framer-motion"
 import { motion } from "framer-motion"
 
 
@@ -67,6 +66,27 @@ return (
                     </span>
                 ))}
             </div>
+              {habits.map((habit) =>(
+                <motion.div
+                  layout
+                  initial={{opacity:0, y:10}}
+                  animate={{opacity:1, y:0}}
+                  className="calendar-row"
+                  key={habit.id}>
+
+                    <span className="habit-title">{habit.name}</span>
+                    {currentWeek.map(date => (
+                  <div
+                  key={date}
+                   className={`day-box ${habit.records[date] ? "checked": ''}` }
+                   onClick={()=> dispatch(toggleDay({habitId: habit.id, date}))}>
+                       
+                        </div>
+
+                    ))}
+              
+                </motion.div>
+              ))}
         </div>
     </div>
     
