@@ -1,6 +1,6 @@
 import { useState } from "react"
 import { useDispatch, useSelector } from "react-redux"
-import { addHabit, toggleDay } from "../HabitTracker/HabitSlice"
+import { addHabit, deleteHabit, toggleDay } from "../HabitTracker/HabitSlice"
 import { format } from "date-fns"
 import { motion } from "framer-motion"
 
@@ -80,10 +80,17 @@ return (
                   key={date}
                    className={`day-box ${habit.records[date] ? "checked": ''}` }
                    onClick={()=> dispatch(toggleDay({habitId: habit.id, date}))}>
+                    {habit.records[date] && <span className="checkmark">✅</span>}
                        
                         </div>
 
                     ))}
+
+                    <button className="delete-btn"
+                    onClick={() => dispatch(deleteHabit(habit.id))}
+                    title="Delete Habit">
+                              🗑️
+                    </button>
               
                 </motion.div>
               ))}
