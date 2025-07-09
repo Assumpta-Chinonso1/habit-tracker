@@ -46,10 +46,25 @@ const handleAdd = (e) =>{
                 />
 
                 <motion.button
-                className="add-btn">
-
+                className="add-btn"
+                whileTap={{scale: 0.9}}
+                onClick={handleAdd}
+                disabled={!habitName.trim()}>
+                     Add Habit
                 </motion.button>
 
+            </div>
+            <div className="calendar">
+                <div className="calendar-header">
+                    <span className="header-title">Habit</span>
+                    {currentWeek.map(date=>(
+                        <span key={date} className="header-day">
+                        {format(new Date(date), "EEE")}
+                        </span>
+                    ))}
+                </div>
+
+                 
             </div>
         </div>
     )
