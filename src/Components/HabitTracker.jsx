@@ -1,3 +1,4 @@
+import { setDate } from "date-fns"
 import { useState } from "react"
 import { useDispatch, useSelector } from "react-redux"
 
@@ -7,8 +8,9 @@ const [habitName, setHabitName] = useState('')
 const habits = useSelector((state) => state.habits.habits)
 const dispatch = useDispatch()
 
-
-
+const currentWeek = Array.from({length: 7}, (_, i))
+const today = new Date()
+today.setDate()
 
 
 
