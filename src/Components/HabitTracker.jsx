@@ -1,9 +1,8 @@
-import { format, setDate } from "date-fns"
+import { format } from "date-fns"
 import { useState } from "react"
 import { useDispatch, useSelector } from "react-redux"
 import { addHabit, deleteHabit, toggleDay } from "../HabitTracker/HabitSlice"
 import { motion } from "framer-motion"
-import { div } from "framer-motion/client"
 
 
 const HabitTracker = () => {
