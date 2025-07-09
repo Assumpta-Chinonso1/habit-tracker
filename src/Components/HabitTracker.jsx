@@ -12,7 +12,7 @@ const dispatch = useDispatch()
 
 const currentWeek = Array.from({length:7}, (_, i) => {
     const today = new Date()
-    today.setDate(today.getDate() - today.getDay() + i)
+    today.setDate(today.getDate()- today.getDate() + i)
     return today.toISOString().split('T')[0]
 
 })
@@ -79,16 +79,16 @@ const handleAdd = (e) =>{
                       {currentWeek.map(date => (
                         <div
                         key={date}
-                     className={`day-box ${habit.recoords[date] ? "checked": ''}`}
+                     className={`day-box ${habit.records[date] ? "checked": ''}`}
                      onClick={()=> dispatch(toggleDay({habitId: habit.id, date}))}>
 
-                        {habit.recoords[date] && <span className="checked">✅</span> }
+                        {habit.records[date] && <span className="checked">✅</span> }
                        
                         </div>
                       ))}
 
                       <button className="delete-btn"
-                      onClick={() => dispatch(deleteHabit(habit))}
+                      onClick={() => dispatch(deleteHabit(habit.id))}
                       title="Delete Habit">
                            🗑️
                       </button>
