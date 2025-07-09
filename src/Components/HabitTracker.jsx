@@ -65,8 +65,6 @@ const handleAdd = (e) =>{
                     animate={{opacity:1, y:0}}
                     className="calendar-row"
                     key={habit.id}>
-                      
-
                       <span className="habit-title">
                         {habit.name}
                       </span>
