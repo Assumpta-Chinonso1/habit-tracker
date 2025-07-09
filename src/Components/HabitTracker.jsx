@@ -11,3 +11,6 @@ const HabitTracker = () => {
         </div>
     )
 }
+
+
+export default HabitTracker
