@@ -47,7 +47,6 @@ const handleAdd = (e) =>{
                 disabled={!habitName.trim()}>
                      Add Habit
                 </motion.button>
-
             </div>
             <div className="calendar">
                 <div className="calendar-header">
