@@ -13,7 +13,6 @@ const currentWeek = Array.from({length:7}, (_, i) => {
     const today = new Date()
     today.setDate(today.getDate()- today.getDate() + i)
     return today.toISOString().split('T')[0]
-
 })
 
 const handleAdd = (e) =>{
