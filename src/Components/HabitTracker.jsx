@@ -13,7 +13,12 @@ const HabitTracker = () => {
       today.setDate(today.getDate() - today.getDay() + i)
      })
 
-     
+     const handleAdd = (e) => {
+      e.preventDefault()
+      if(habitName.trim()){
+        dispatch(addH)
+      }
+     }
 
 
 
