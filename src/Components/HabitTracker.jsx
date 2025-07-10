@@ -1,7 +1,10 @@
+import { useState } from "react"
 
 
 const HabitTracker = () => {
 
+
+  const [habitName, setHabitName] = useState('')
 
 
 
