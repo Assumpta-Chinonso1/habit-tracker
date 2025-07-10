@@ -67,7 +67,18 @@ const HabitTracker = () => {
                   </div>
 
                   {habits.map((habit)=>(
-                    
+                      <motion.div
+                      layout
+                      initial={{opacity:0, y:10}}
+                      animate={{opacity:1, y:0}}
+                      key={habit.id}
+                      className="calendar-row">
+
+                        <span className="habit-title">
+                          {habit.name}
+                        </span>
+
+                      </motion.div>
                   ))}
                  </div>
 
