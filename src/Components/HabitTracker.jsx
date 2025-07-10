@@ -92,10 +92,8 @@ const HabitTracker = () => {
                       </motion.div>
                   ))}
                  </div>
-
     </div>
   )
 }
-
 export default HabitTracker
 
