@@ -1,5 +1,6 @@
 import { useState } from "react"
 import { useDispatch, useSelector } from "react-redux"
+import { addHabit } from "../HabitTracker/HabitSlice"
 
 
 const HabitTracker = () => {
@@ -16,7 +17,8 @@ const HabitTracker = () => {
      const handleAdd = (e) => {
       e.preventDefault()
       if(habitName.trim()){
-        dispatch(addH)
+        dispatch(addHabit(habitName.trim()))
+        setHabitName('')
       }
      }
 
