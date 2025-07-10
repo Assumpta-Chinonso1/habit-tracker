@@ -53,7 +53,10 @@ const HabitTracker = () => {
                 disabled={!habitName.trim()}>
                    Add Habit
                 </motion.button>
+
              </div>
+
+             
     </div>
   )
 }
