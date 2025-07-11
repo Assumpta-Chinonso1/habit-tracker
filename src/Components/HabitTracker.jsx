@@ -53,6 +53,22 @@ const  handleAdd = (e) => {
           Add Habit
            </motion.button>
       </div>
+            <div className="calendar">
+              <div className="calendar-header">
+                <span className="habit-header">Habit</span>
+                {currentWeek.map(date=>(
+                  <span key={date}
+                   className="header-day">
+                  {format(new Date(date), "EEE")}
+                  </span>
+                ))}
+              </div>
+              {habits.map((habit) => (
+                <motion.div>
+                  
+                </motion.div>
+              ))}
+            </div>
     </div>
   )
 }
