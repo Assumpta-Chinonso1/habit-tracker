@@ -1,6 +1,6 @@
 import { useState } from "react"
 import { useDispatch, useSelector } from "react-redux"
-import { addHabit } from "../HabitTracker/HabitSlice"
+import { addHabit, deleteHabit, toggleDay } from "../HabitTracker/HabitSlice"
 import { format } from "date-fns"
 import { motion } from "framer-motion"
 
@@ -64,8 +64,29 @@ const  handleAdd = (e) => {
                 ))}
               </div>
               {habits.map((habit) => (
-                <motion.div>
-                  
+                <motion.div
+                layout
+                initial={{opacity:0, y:10}}
+                animate={{opacity:1, y:1}}
+                key={habit.id}
+                className="calendar-row">
+
+                  <span className="habit-title">{habit.name}</span>
+                  {currentWeek.map(date => (
+                    <div 
+                    className={`day-box ${habit.records[date] ? "checked" : ''}`}
+                    onClick={() => dispatch(toggleDay({habitId: habit.id, date}))}>
+                       
+                       {habit.records[date] && <span className="checked">✅</span> }
+                    </div>
+                  ))}
+
+                  <button className="delete-btn"
+                  onClick={() => dispatch(deleteHabit(habit.id))}
+                  title="Delete Button">
+                         🗑️
+                  </button>
+
                 </motion.div>
               ))}
             </div>
