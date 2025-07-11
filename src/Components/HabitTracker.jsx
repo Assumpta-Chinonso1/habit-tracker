@@ -26,6 +26,7 @@ const  handleAdd = (e) => {
   return (
     <div className="habit-wrapper">
       <h1>My Habit Tracker</h1>
+      
       <div className="date-section">
         <div>
           WEEK OF {format(new Date(currentWeek[0]), "MMM d")} -
