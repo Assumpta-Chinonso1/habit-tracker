@@ -2,6 +2,7 @@ import { useState } from "react"
 import { useDispatch, useSelector } from "react-redux"
 import { addHabit } from "../HabitTracker/HabitSlice"
 import { format } from "date-fns"
+import { motion } from "framer-motion"
 
 
 
@@ -39,7 +40,18 @@ const  handleAdd = (e) => {
       </div>
 
       <div className="habit-input">
-        
+         <input type="text"
+         value={habitName}
+         placeholder="Enter Habit e.g Drink Water"
+         onChange={(e) => setHabitName(e.target.value)} />
+
+           <motion.button
+           className="add-btn"
+           whileTap={{scale:0.9}}
+           disabled={!habitName.trim()}
+           onClick={handleAdd}>
+
+           </motion.button>
       </div>
     </div>
   )
