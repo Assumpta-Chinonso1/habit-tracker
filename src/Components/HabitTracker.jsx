@@ -37,6 +37,10 @@ const  handleAdd = (e) => {
 
         </div>
       </div>
+
+      <div className="habit-input">
+        
+      </div>
     </div>
   )
 }
