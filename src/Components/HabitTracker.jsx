@@ -34,7 +34,8 @@ const  handleAdd = (e) => {
         <div>
             DATE {format(new Date(), "MMM d, yyyy")}
               </div>
-      </div>
+            </div>
+
       <div className="habit-input">
          <input type="text"
          value={habitName}
