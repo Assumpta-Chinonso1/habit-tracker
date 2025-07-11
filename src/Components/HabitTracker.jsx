@@ -36,7 +36,6 @@ const  handleAdd = (e) => {
 
         </div>
       </div>
-
       <div className="habit-input">
          <input type="text"
          value={habitName}
