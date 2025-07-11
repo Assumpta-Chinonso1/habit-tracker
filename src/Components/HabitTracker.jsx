@@ -1,8 +1,11 @@
+import { useState } from "react"
+import { useSelector } from "react-redux"
 
 
 
 const HabitTracker = () => {
-
+const [habitName, setHabitName] = useState('')
+const habits = useSelector((state) => (state.habits.habits))
 
 
   return (
