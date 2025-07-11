@@ -80,7 +80,6 @@ const  handleAdd = (e) => {
                        {habit.records[date] && <span className="checked">✅</span> }
                     </div>
                   ))}
-
                   <button className="delete-btn"
                   onClick={() => dispatch(deleteHabit(habit.id))}
                   title="Delete Button">
