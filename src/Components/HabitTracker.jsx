@@ -1,6 +1,7 @@
 import { useState } from "react"
 import { useDispatch, useSelector } from "react-redux"
 import { addHabit } from "../HabitTracker/HabitSlice"
+import { format } from "date-fns"
 
 
 
@@ -26,6 +27,15 @@ const  handleAdd = (e) => {
   return (
     <div className="habit-wrapper">
       <h1>My Habit Tracker</h1>
+      <div className="date-section">
+        <div>
+          WEEK OF {format(new Date(currentWeek[0]), "MMM d")} -
+                  {format (new Date(currentWeek[0]), "MMM d")}
+        </div>
+        <div>
+          
+        </div>
+      </div>
     </div>
   )
 }
