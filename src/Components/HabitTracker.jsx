@@ -62,7 +62,7 @@ const  handleAdd = (e) => {
                   </span>
                 ))}
               </div>
-              
+
               {habits.map((habit) => (
                 <motion.div
                 layout
@@ -85,9 +85,9 @@ const  handleAdd = (e) => {
                   title="Delete Button">
                          🗑️
                   </button>
-
                 </motion.div>
               ))}
+              
             </div>
     </div>
   )
