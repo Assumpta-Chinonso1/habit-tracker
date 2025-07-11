@@ -26,18 +26,18 @@ const  handleAdd = (e) => {
   return (
     <div className="habit-wrapper">
       <h1>My Habit Tracker</h1>
-      
-      <div className="date-section">
-        <div>
-          WEEK OF {format(new Date(currentWeek[0]), "MMM d")} -
+
+           <div className="date-section">
+             <div>
+             WEEK OF {format(new Date(currentWeek[0]), "MMM d")} -
                   {format (new Date(currentWeek[0]), "MMM d")}
-        </div>
-        <div>
-            DATE {format(new Date(), "MMM d, yyyy")}
+                 </div>
+                     <div>
+                 DATE {format(new Date(), "MMM d, yyyy")}
               </div>
             </div>
 
-      <div className="habit-input">
+           <div className="habit-input">
          <input type="text"
          value={habitName}
          placeholder="Enter Habit e.g Drink Water"
