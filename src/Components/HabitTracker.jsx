@@ -50,6 +50,7 @@ const  handleAdd = (e) => {
            onClick={handleAdd}>
           Add Habit
            </motion.button>
+           
             </div>
             <div className="calendar">
               <div className="calendar-header">
