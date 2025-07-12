@@ -49,7 +49,7 @@ const  handleAdd = (e) => {
           Add Habit
            </motion.button>
               </div>
-              
+
              <div className="calendar">
               <div className="calendar-header">
               <span className="habit-header">Habit</span>
@@ -60,7 +60,6 @@ const  handleAdd = (e) => {
                 </span>
                ))}
               </div>
-
               {habits.map((habit) => (
                 <motion.div
                 layout
