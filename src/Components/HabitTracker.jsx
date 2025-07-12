@@ -55,7 +55,7 @@ const  handleAdd = (e) => {
               <span className="habit-header">Habit</span>
                 {currentWeek.map(date=>(
                 <span key={date}
-                 className="header-day">
+               className="header-day">
                 {format(new Date(date), "EEE")}
                   </span>
                 ))}
