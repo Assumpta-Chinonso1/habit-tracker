@@ -57,7 +57,7 @@ const  handleAdd = (e) => {
                 <span key={date}
                className="header-day">
                 {format(new Date(date), "EEE")}
-                  </span>
+                </span>
                 ))}
               </div>
 
