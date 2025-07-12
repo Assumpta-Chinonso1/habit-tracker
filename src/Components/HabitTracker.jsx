@@ -75,7 +75,7 @@ const  handleAdd = (e) => {
                     className={`day-box ${habit.records[date] ? "checked" : ''}`}
                     onClick={() => dispatch(toggleDay({habitId: habit.id, date}))}>
                        
-                      {habit.records[date] && <span className="checked">✅</span> }
+                     {habit.records[date] && <span className="checked">✅</span> }
                     </div>
                   ))}
                   <button className="delete-btn"
