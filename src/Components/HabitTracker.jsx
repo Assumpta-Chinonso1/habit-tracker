@@ -40,7 +40,7 @@ const  handleAdd = (e) => {
          value={habitName}
          placeholder="Enter Habit e.g Drink Water"
          onChange={(e) => setHabitName(e.target.value)} />
-         
+
            <motion.button
            className="add-btn"
            whileTap={{scale:0.9}}
@@ -49,8 +49,8 @@ const  handleAdd = (e) => {
           Add Habit
            </motion.button>
 
-            </div>
-            <div className="calendar">
+           </div>
+          <div className="calendar">
               <div className="calendar-header">
                 <span className="habit-header">Habit</span>
                 {currentWeek.map(date=>(
