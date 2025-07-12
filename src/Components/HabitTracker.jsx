@@ -49,6 +49,7 @@ const  handleAdd = (e) => {
           Add Habit
            </motion.button>
               </div>
+              
              <div className="calendar">
               <div className="calendar-header">
               <span className="habit-header">Habit</span>
