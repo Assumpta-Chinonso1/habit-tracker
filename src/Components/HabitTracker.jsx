@@ -14,6 +14,7 @@ const currentWeek = Array.from({length: 7}, (_, i) => {
   today.setDate(today.getDate() - today.getDay() + i)
   return today.toISOString().split('T')[0]
 })
+
 const  handleAdd = (e) => {
   e.preventDefault()
   if(habitName.trim()){
