@@ -50,7 +50,7 @@ const  handleAdd = (e) => {
            </motion.button>
 
            </div>
-          <div className="calendar">
+             <div className="calendar">
               <div className="calendar-header">
               <span className="habit-header">Habit</span>
               {currentWeek.map(date=>(
