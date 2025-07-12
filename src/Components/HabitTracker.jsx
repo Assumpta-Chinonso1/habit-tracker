@@ -41,6 +41,7 @@ const  handleAdd = (e) => {
          placeholder="Enter Habit e.g Drink Water"
          onChange={(e) => setHabitName(e.target.value)} />
 
+
            <motion.button
            className="add-btn"
            whileTap={{scale:0.9}}
