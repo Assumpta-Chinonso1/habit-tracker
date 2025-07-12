@@ -58,7 +58,7 @@ const  handleAdd = (e) => {
                className="header-day">
                 {format(new Date(date), "EEE")}
                 </span>
-                ))}
+               ))}
               </div>
 
               {habits.map((habit) => (
