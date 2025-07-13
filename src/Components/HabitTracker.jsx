@@ -60,6 +60,7 @@ const  handleAdd = (e) => {
                 </span>
                ))}
               </div>
+              
               {habits.map((habit) => (
                 <motion.div
                 layout
