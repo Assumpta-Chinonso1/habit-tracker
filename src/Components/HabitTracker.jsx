@@ -86,8 +86,7 @@ const  handleAdd = (e) => {
                   </button>
                 </motion.div>
               ))}
-              
-          </div>
+             </div>
     </div>
   )
 }
