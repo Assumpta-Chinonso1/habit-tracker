@@ -19,8 +19,8 @@ const  handleAdd = (e) => {
   e.preventDefault()
   if(habitName.trim()){
     dispatch(addHabit(habitName.trim()))
-  }
-}
+         }
+         }
           return (
            <div className="habit-wrapper">
             <h1>My Habit Tracker</h1>
