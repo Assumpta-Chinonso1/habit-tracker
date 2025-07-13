@@ -69,7 +69,7 @@ const  handleAdd = (e) => {
                 key={habit.id}
                 className="calendar-row">
 
-                  <span className="habit-title">{habit.name}</span>
+                <span className="habit-title">{habit.name}</span>
                   {currentWeek.map(date => (
                     <div 
                     className={`day-box ${habit.records[date] ? "checked" : ''}`}
@@ -81,7 +81,7 @@ const  handleAdd = (e) => {
                   <button className="delete-btn"
                   onClick={() => dispatch(deleteHabit(habit.id))}
                   title="Delete Button">
-                    
+
                  🗑️
                     </button>
                 </motion.div>
