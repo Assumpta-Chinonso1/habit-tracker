@@ -81,6 +81,7 @@ const  handleAdd = (e) => {
                   <button className="delete-btn"
                   onClick={() => dispatch(deleteHabit(habit.id))}
                   title="Delete Button">
+                    
                  🗑️
                     </button>
                 </motion.div>
