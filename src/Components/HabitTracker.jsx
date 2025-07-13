@@ -30,7 +30,7 @@ const  handleAdd = (e) => {
              WEEK OF {format(new Date(currentWeek[0]), "MMM d")} -
                   {format (new Date(currentWeek[0]), "MMM d")}
                  </div>
-                     <div>
+                 <div>
                  DATE {format(new Date(), "MMM d, yyyy")}
               </div>
             </div>
