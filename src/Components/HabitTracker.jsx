@@ -35,7 +35,7 @@ const  handleAdd = (e) => {
               </div>
             </div>
 
-           <div className="habit-input">
+         <div className="habit-input">
          <input type="text"
          value={habitName}
          placeholder="Enter Habit e.g Drink Water"
