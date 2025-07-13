@@ -27,7 +27,7 @@ const  handleAdd = (e) => {
 
            <div className="date-section">
            <div>
-             WEEK OF {format(new Date(currentWeek[0]), "MMM d")} -
+                  WEEK OF {format(new Date(currentWeek[0]), "MMM d")} -
                   {format (new Date(currentWeek[0]), "MMM d")}
                  </div>
                  <div>
