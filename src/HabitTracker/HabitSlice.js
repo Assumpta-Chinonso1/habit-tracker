@@ -5,7 +5,7 @@ import { createSlice, nanoid } from "@reduxjs/toolkit";
 
   }
 
-const habitSlice = createSlice({
+           const habitSlice = createSlice({
     name: 'habits',
     initialState,
     reducers: {
