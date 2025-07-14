@@ -7,7 +7,7 @@ import { createSlice, nanoid } from "@reduxjs/toolkit";
 
            const habitSlice = createSlice({
                    name: 'habits',
-                      initialState,
+             initialState,
               reducers: {
                addHabit: (state, action) => {
                 state.habits.push({
