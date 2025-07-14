@@ -10,7 +10,7 @@ const habitSlice = createSlice({
     initialState,
     reducers: {
       addHabit: (state, action) => {
-              state.habits.push({
+                state.habits.push({
                 id: nanoid(),
                 name: action.payload,
                 records: {}
