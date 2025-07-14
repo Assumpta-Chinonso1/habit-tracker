@@ -14,7 +14,7 @@ import { createSlice, nanoid } from "@reduxjs/toolkit";
                 id: nanoid(),
                 name: action.payload,
                 records: {}
-            })
+          })
            localStorage.setItem('habits', JSON.stringify(state.habits))
          },
             toggleDay: (state, action ) =>{
