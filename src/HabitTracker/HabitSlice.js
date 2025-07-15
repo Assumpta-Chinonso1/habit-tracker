@@ -33,4 +33,4 @@
   })
 
  export const { addHabit, toggleDay, deleteHabit  } =  habitSlice.actions
-export default habitSlice.reducer
+ export default habitSlice.reducer
