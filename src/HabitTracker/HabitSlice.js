@@ -30,7 +30,7 @@ import { createSlice, nanoid } from "@reduxjs/toolkit";
           state.habits = state.habits.filter((h)=>h.id !== action.payload)
         }
     }
-})
+ })
 
 export const { addHabit, toggleDay, deleteHabit  } =  habitSlice.actions
 export default habitSlice.reducer
