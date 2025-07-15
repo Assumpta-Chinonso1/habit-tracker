@@ -5,7 +5,7 @@
 
       }
 
-           const habitSlice = createSlice({
+          const habitSlice = createSlice({
                 name: 'habits',
                 initialState,
                 reducers: {
