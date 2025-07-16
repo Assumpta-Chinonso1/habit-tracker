@@ -15,7 +15,7 @@
                 name: action.payload,
                 records: {}
           })
-          
+
            localStorage.setItem('habits', JSON.stringify(state.habits))
        },
             toggleDay: (state, action ) =>{
@@ -23,6 +23,7 @@
             const habit = state.habits.find((h)=> h.id === habitId)
 
          if(habit){
+          
                 habit.records[date] = !habit.records[date]
                 localStorage.setItem('habits', JSON.stringify(state.habits))
              }
