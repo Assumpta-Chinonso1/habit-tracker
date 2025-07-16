@@ -9,12 +9,13 @@
                 name: 'habits',
                 initialState,
                 reducers: {
-                  
+
            addHabit: (state, action) => {
                 state.habits.push({
                 id: nanoid(),
                 name: action.payload,
                 records: {}
+                
           })
 
            localStorage.setItem('habits', JSON.stringify(state.habits))
