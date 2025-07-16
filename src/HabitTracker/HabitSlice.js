@@ -1,6 +1,6 @@
   import { createSlice, nanoid } from "@reduxjs/toolkit";
 
-        const initialState = {
+      const initialState = {
          habits: JSON.parse(localStorage.getItem('habits')) || [],
 
        }
