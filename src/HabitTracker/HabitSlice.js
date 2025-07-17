@@ -25,7 +25,7 @@
             const {habitId, date} = action.payload
             const habit = state.habits.find((h) => h.id === habitId)
 
-         if(habit) {   
+         if (habit) {   
 
                 habit.records[date] = !habit.records[date]
                 localStorage.setItem('habits', JSON.stringify(state.habits))
