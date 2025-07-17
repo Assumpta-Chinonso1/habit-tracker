@@ -20,7 +20,7 @@
         })
 
         
-        localStorage.setItem('habits', JSON.stringify(state.habits))
+ localStorage.setItem('habits', JSON.stringify(state.habits))
 
        },
 
