@@ -11,6 +11,7 @@
                 reducers: {
 
           addHabit: (state, action) => {
+            
                 state.habits.push({
                 id: nanoid(),
                 name: action.payload,
@@ -20,7 +21,7 @@
 
         
         localStorage.setItem('habits', JSON.stringify(state.habits))
-        
+
        },
 
             toggleDay: (state, action ) => { 
