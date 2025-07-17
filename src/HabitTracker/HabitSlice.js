@@ -36,7 +36,7 @@
 
            },
 
-           deleteHabit:  (state, action) => {
+         deleteHabit:  (state, action) => {
           state.habits = state.habits.filter((h) => h.id !== action.payload)
      },
 
