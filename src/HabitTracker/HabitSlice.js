@@ -21,7 +21,7 @@
  
          localStorage.setItem('habits', JSON.stringify(state.habits))
 
-       },
+        },
 
             toggleDay: (state, action ) => { 
             const {habitId, date} = action.payload
