@@ -5,13 +5,13 @@
 
        }
 
-          const habitSlice = createSlice({
+          const habitSlice = createSlice ({
                 name: 'habits',
                 initialState,
                 reducers: {
 
           addHabit: (state, action) => {
-            
+
                 state.habits.push({
                 id: nanoid(),
                 name: action.payload,
