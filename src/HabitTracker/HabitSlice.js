@@ -18,7 +18,8 @@
                 
         })
 
-          localStorage.setItem('habits', JSON.stringify(state.habits))
+        
+        localStorage.setItem('habits', JSON.stringify(state.habits))
        },
 
             toggleDay: (state, action ) => { 
@@ -30,7 +31,7 @@
                 habit.records[date] = !habit.records[date]
                 localStorage.setItem('habits', JSON.stringify(state.habits))
              }
-             
+
           },
 
            deleteHabit:  (state, action) => {
