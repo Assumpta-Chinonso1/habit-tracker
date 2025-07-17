@@ -16,7 +16,7 @@
                 name: action.payload,
                 records: {}
                 
-          })
+        })
 
            localStorage.setItem('habits', JSON.stringify(state.habits))
        },
