@@ -18,8 +18,7 @@
                 records: {}
                 
         })
-
-        
+ 
          localStorage.setItem('habits', JSON.stringify(state.habits))
 
        },
