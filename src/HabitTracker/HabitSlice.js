@@ -20,6 +20,7 @@
 
         
         localStorage.setItem('habits', JSON.stringify(state.habits))
+        
        },
 
             toggleDay: (state, action ) => { 
