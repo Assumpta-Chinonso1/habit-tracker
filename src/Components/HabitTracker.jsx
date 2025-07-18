@@ -24,8 +24,8 @@
      dispatch(addHabit(habitName.trim()))
 
          }
-         
-         }
+
+     }
         return (
            <div className="habit-wrapper">
             <h1>My Habit Tracker</h1>
