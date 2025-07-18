@@ -6,7 +6,7 @@ import { motion } from "framer-motion"
 
  const HabitTracker = () => {
  const [habitName, setHabitName] = useState('')
-const habits = useSelector((state) => (state.habits.habits))
+ const habits = useSelector((state) => (state.habits.habits))
 const dispatch = useDispatch()
 
 const currentWeek = Array.from({length: 7}, (_, i) => {
