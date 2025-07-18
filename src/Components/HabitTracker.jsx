@@ -17,7 +17,7 @@ import { motion } from "framer-motion"
 
     const  handleAdd = (e) => {
      e.preventDefault()
-  if(habitName.trim()){
+    if(habitName.trim()){
     dispatch(addHabit(habitName.trim()))
          }
          }
