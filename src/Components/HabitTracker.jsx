@@ -15,7 +15,7 @@ import { motion } from "framer-motion"
   return today.toISOString().split('T')[0]
 })
 
-const  handleAdd = (e) => {
+  const  handleAdd = (e) => {
   e.preventDefault()
   if(habitName.trim()){
     dispatch(addHabit(habitName.trim()))
