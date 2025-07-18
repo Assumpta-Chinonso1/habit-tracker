@@ -9,7 +9,7 @@ import { motion } from "framer-motion"
  const habits = useSelector((state) => (state.habits.habits))
  const dispatch = useDispatch()
 
-const currentWeek = Array.from({length: 7}, (_, i) => {
+  const currentWeek = Array.from({length: 7}, (_, i) => {
   const today = new Date()
   today.setDate(today.getDate() - today.getDay() + i)
   return today.toISOString().split('T')[0]
