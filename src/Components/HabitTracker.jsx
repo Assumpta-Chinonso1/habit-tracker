@@ -13,6 +13,7 @@
   const today = new Date()
   today.setDate(today.getDate() - today.getDay() + i)
   return today.toISOString().split('T')[0]
+  
 })
 
     const  handleAdd = (e) => {
