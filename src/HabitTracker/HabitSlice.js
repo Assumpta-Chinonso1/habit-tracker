@@ -30,7 +30,7 @@
 
           if(habit) {   
 
-                habit.records[date] = !habit.records[date]
+               habit.records[date] = !habit.records[date]
                 localStorage.setItem('habits', JSON.stringify(state.habits))
              }
 
