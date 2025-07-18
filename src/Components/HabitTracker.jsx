@@ -13,7 +13,7 @@
   const today = new Date()
   today.setDate(today.getDate() - today.getDay() + i)
   return today.toISOString().split('T')[0]
-  
+
 })
 
     const  handleAdd = (e) => {
@@ -24,6 +24,7 @@
      dispatch(addHabit(habitName.trim()))
 
          }
+         
          }
         return (
            <div className="habit-wrapper">
