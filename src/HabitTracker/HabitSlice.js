@@ -9,7 +9,7 @@
                 initialState,
                 reducers: {
 
-          addHabit: (state, action) => {
+           addHabit: (state, action) => {
 
                 state.habits.push({
                 id: nanoid(),
