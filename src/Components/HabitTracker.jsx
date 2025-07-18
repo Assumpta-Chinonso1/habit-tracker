@@ -19,8 +19,9 @@ import { motion } from "framer-motion"
      e.preventDefault()
 
       if(habitName.trim()){
-        
+
      dispatch(addHabit(habitName.trim()))
+     
          }
          }
         return (
