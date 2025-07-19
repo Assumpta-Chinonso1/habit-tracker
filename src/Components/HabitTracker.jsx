@@ -33,11 +33,12 @@ import { motion } from "framer-motion"
             <h1> My Habit Tracker </h1>
 
            <div className="date-section">
-           <div>
+               
+                <div>
                   WEEK OF {format(new Date(currentWeek[0]), "MMM d")} -
                   {format (new Date(currentWeek[0]), "MMM d")}
                  </div>
-                 
+
                  <div>
                  DATE {format(new Date(), "MMM d, yyyy")}
               </div>
