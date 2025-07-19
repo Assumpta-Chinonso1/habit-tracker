@@ -69,8 +69,9 @@ import { motion } from "framer-motion"
                className="header-day">
                 {format(new Date(date), "EEE")}
                 </span>
-                
+
                ))}
+               
               </div>
 
               {habits.map((habit) => (
