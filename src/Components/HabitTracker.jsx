@@ -93,6 +93,7 @@ import { motion } from "framer-motion"
 
                     </div>
                   ))}
+                  
                   <button className="delete-btn"
                   onClick={() => dispatch(deleteHabit(habit.id))}
                   title="Delete Button">
