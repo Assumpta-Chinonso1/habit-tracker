@@ -71,7 +71,7 @@ import { motion } from "framer-motion"
                 </span>
 
                ))}
-               
+
               </div>
 
               {habits.map((habit) => (
@@ -84,6 +84,7 @@ import { motion } from "framer-motion"
 
                 <span className="habit-title">{habit.name}</span>
                   {currentWeek.map(date => (
+                    
                     <div 
                     className={`day-box ${habit.records[date] ? "checked" : ''}`}
                     onClick={() => dispatch(toggleDay({habitId: habit.id, date}))}>
