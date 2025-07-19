@@ -75,6 +75,7 @@ import { motion } from "framer-motion"
               </div>
 
               {habits.map((habit) => (
+                
                 <motion.div
                 layout
                 initial={{opacity:0, y:10}}
@@ -103,7 +104,7 @@ import { motion } from "framer-motion"
                 </motion.div>
 
               ))}
-              
+
              </div>
     </div>
   )
