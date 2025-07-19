@@ -101,8 +101,9 @@ import { motion } from "framer-motion"
                    </button>
 
                 </motion.div>
-                
+
               ))}
+              
              </div>
     </div>
   )
