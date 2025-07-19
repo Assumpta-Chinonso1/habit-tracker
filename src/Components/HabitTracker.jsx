@@ -58,7 +58,7 @@ import { motion } from "framer-motion"
            onClick={handleAdd}>
             Add Habit
            </motion.button>
-           
+
             </div>
 
              <div className="calendar">
@@ -69,6 +69,7 @@ import { motion } from "framer-motion"
                className="header-day">
                 {format(new Date(date), "EEE")}
                 </span>
+                
                ))}
               </div>
 
