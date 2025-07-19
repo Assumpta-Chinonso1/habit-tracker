@@ -90,7 +90,7 @@ import { motion } from "framer-motion"
                     onClick={() => dispatch(toggleDay({habitId: habit.id, date}))}>
                        
                      {habit.records[date] && <span className="checked"> ✅ </span> }
-                     
+
                     </div>
                   ))}
                   <button className="delete-btn"
@@ -98,7 +98,7 @@ import { motion } from "framer-motion"
                   title="Delete Button">
 
                  🗑️
-                    </button>
+                   </button>
                 </motion.div>
               ))}
              </div>
