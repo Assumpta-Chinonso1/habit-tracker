@@ -99,8 +99,9 @@ import { motion } from "framer-motion"
                   title="Delete Button">
                                    🗑️
                    </button>
-                   
+
                 </motion.div>
+                
               ))}
              </div>
     </div>
