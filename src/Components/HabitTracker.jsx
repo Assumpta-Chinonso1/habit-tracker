@@ -97,7 +97,7 @@ import { motion } from "framer-motion"
                   <button className="delete-btn"
                   onClick={() => dispatch(deleteHabit(habit.id))}
                   title="Delete Button">
-  🗑️
+                                   🗑️
                    </button>
                 </motion.div>
               ))}
