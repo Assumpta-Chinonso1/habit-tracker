@@ -1,4 +1,4 @@
- import { useState } from "react"
+  import { useState } from "react"
  import { useDispatch, useSelector } from "react-redux"
  import { addHabit, deleteHabit, toggleDay } from "../HabitTracker/HabitSlice"
  import { format } from "date-fns"
@@ -14,7 +14,7 @@
   today.setDate(today.getDate() - today.getDay() + i)
   return today.toISOString().split('T')[0]
 
-   })
+      })
 
     const  handleAdd = (e) => {
      e.preventDefault()
