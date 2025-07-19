@@ -30,7 +30,7 @@ import { motion } from "framer-motion"
         return (
 
            <div className="habit-wrapper">
-            <h1>My Habit Tracker </h1>
+            <h1> My Habit Tracker </h1>
 
            <div className="date-section">
            <div>
