@@ -2,7 +2,7 @@ import { useState } from "react"
 import { useDispatch, useSelector } from "react-redux"
 import { addHabit, deleteHabit, toggleDay } from "../HabitTracker/HabitSlice"
 import { format } from "date-fns"
-  import { motion } from "framer-motion"
+import { motion } from "framer-motion"
 
  const HabitTracker = () => {
  const [habitName, setHabitName] = useState('')
