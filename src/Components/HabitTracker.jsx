@@ -57,9 +57,7 @@ import { motion } from "framer-motion"
            disabled={!habitName.trim()}
            onClick={handleAdd}>
             Add Habit
-           </motion.button>
-
-          </div>
+           </motion.button   </div>
 
              <div className="calendar">
              <div className="calendar-header">
