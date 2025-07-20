@@ -65,7 +65,7 @@ import { motion } from "framer-motion"
               <div className="calendar-header">
              <span className="habit-header">Habit</span>
               {currentWeek.map(date=> (
-                <span key={date}
+              <span key={date}
                className="header-day">
                 {format(new Date(date), "EEE")}
                 </span>
