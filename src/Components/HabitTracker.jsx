@@ -89,7 +89,7 @@ import { motion } from "framer-motion"
                 {currentWeek.map(date => (
 
                  <div 
-                   className={`day-box ${habit.records[date] ? "checked" : ''}`}
+                  className={`day-box ${habit.records[date] ? "checked" : ''}`}
                    onClick={() => dispatch(toggleDay({habitId: habit.id, date}))}>
                        
                      {habit.records[date] && <span className="checked"> ✅ </span> }
