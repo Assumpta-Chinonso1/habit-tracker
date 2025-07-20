@@ -4,7 +4,7 @@ import { addHabit, deleteHabit, toggleDay } from "../HabitTracker/HabitSlice"
 import { format } from "date-fns"
 import { motion } from "framer-motion"
 
- const HabitTracker = () => {
+  const HabitTracker = () => {
  const [habitName, setHabitName] = useState('')
  const habits = useSelector((state) => (state.habits.habits))
  const dispatch = useDispatch()
@@ -30,7 +30,7 @@ import { motion } from "framer-motion"
         return (
 
            <div className="habit-wrapper">
-            
+
             <h1> My Habit Tracker </h1>
 
            <div className="date-section">
