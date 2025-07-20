@@ -74,7 +74,7 @@ import { motion } from "framer-motion"
 
               </div>
 
-              {habits.map((habit) => (
+             {habits.map((habit) => (
                 
                 <motion.div
                 layout
