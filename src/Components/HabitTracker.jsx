@@ -42,7 +42,6 @@ import { motion } from "framer-motion"
                  <div>
                  DATE {format(new Date(), "MMM d, yyyy")}
               </div>
-
             </div>
 
          <div className="habit-input">
