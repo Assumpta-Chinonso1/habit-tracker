@@ -59,7 +59,7 @@ import { motion } from "framer-motion"
             Add Habit
            </motion.button>
 
-            </div>
+          </div>
 
              <div className="calendar">
              <div className="calendar-header">
