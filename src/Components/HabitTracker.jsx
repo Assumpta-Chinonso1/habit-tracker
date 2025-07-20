@@ -56,8 +56,9 @@ import { motion } from "framer-motion"
            whileTap={{scale:0.9}}
            disabled={!habitName.trim()}
            onClick={handleAdd}>
-            
+
             Add Habit
+            
            </motion.button>  
             </div>
 
