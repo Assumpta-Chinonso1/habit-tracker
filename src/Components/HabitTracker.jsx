@@ -52,7 +52,7 @@ import { motion } from "framer-motion"
          onChange={(e) => setHabitName(e.target.value)} />
 
            <motion.button           
-           className="add-btn"
+            className="add-btn"
            whileTap={{scale:0.9}}
            disabled={!habitName.trim()}
            onClick={handleAdd}>
