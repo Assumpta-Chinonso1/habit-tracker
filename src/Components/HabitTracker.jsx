@@ -90,7 +90,7 @@ import { motion } from "framer-motion"
 
                    <div 
                    className={`day-box ${habit.records[date] ? "checked" : ''}`}
-                    onClick={() => dispatch(toggleDay({habitId: habit.id, date}))}>
+                   onClick={() => dispatch(toggleDay({habitId: habit.id, date}))}>
                        
                      {habit.records[date] && <span className="checked"> ✅ </span> }
 
